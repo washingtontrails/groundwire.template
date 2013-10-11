@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+
+  <body>
+
+    <div metal:define-macro="captcha_field">
+
+        <div class="field"
+             tal:condition="python:context.portal_membership.isAnonymousUser()"
+             tal:define="error errors/captcha|nothing;"
+             tal:attributes="class python:test(error, 'field error', 'field');">
+
+            <label for="captcha" i18n:translate="label_captcha">Enter the word below</label>
+
+            <span class="fieldRequired" title="Required"
+                  i18n:attributes="title"
+                  i18n:translate="label_required">(Required)</span>
+
+            <div class="formHelp" i18n:translate="help_captcha">
+            This check is used to prevent spammers from using this form.
+            </div>
+
+            <div tal:content="error">Validation error output</div>
+
+            <div tal:define="captcha_view nocall:context/@@captcha">
+                <div>
+                    <img tal:replace="structure captcha_view/image_tag"/>
+                    <tal:block tal:define="audio_url captcha_view/audio_url"
+                        tal:condition="audio_url">
+                        <a tal:attributes="href audio_url">[audio]</a>
+                    </tal:block>
+                </div>
+                <input tal:define="is_external context/@@captcha/external|python:False"
+                       tal:condition="not:is_external"
+                       name="captcha"
+                       id="captcha"
+                       value="" alt="Enter the word above" title="Enter the word above"
+                       size="15"
+                       i18n:attributes="alt; title" />
+            </div>
+        </div>
+
+    </div>
+
+  </body>
+</html>

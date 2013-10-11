@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <portlet
+   addview="groundwire.template.EmailCapturePortlet"
+   title="E-mail Sign-up portlet"
+   description="A portlet that displays an e-mail sign-up form."
+   />
+   
+ <portlet
+   addview="groundwire.template.FeaturedItemPortlet"
+   title="Featured Item Portlet"
+   description="A portlet that displays a featured item from a collection."
+   />
+
+</portlets>

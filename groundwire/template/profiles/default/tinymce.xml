@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<object>
+ <resourcetypes>
+  <link_using_uids value="True"/>
+ </resourcetypes>
+ <layout>
+  <styles purge="True">
+   <element value="Heading (H2)|h2"/>
+   <element value="Subheading (H3)|h3"/>
+   <element value="Third-Level Heading (H4)|h4"/>
+   <element value="Discreet|span|discreet"/>
+   <element value="Odd row|tr|odd"/>
+   <element value="Even row|tr|even"/>
+   <element value="Heading cell|th|"/>
+   <element value="Page break (print only)|div|pageBreak"/>
+  </styles>
+ </layout>
+ <toolbar>
+  <toolbar_definitionlist value="False"/>
+  <toolbar_media value="True"/>
+  <toolbar_pastetext value="True"/>
+ </toolbar>
+</object>

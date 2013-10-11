@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+    
+    <!-- Don't expose links to all the Plone sites on the instance. -->
+    <browser:page
+        for="OFS.interfaces.IApplication"
+        name="plone-overview"
+        class="Products.CMFPlone.browser.admin.Overview"
+        permission="zope.Public"
+        template="browser/null-overview.pt"
+        />
+        
+</configure>

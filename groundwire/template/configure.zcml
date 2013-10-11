@@ -1,0 +1,38 @@
+<configure
+ xmlns="http://namespaces.zope.org/browser"
+ xmlns:zcml="http://namespaces.zope.org/zcml"
+ xmlns:five="http://namespaces.zope.org/five"
+ xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+ xmlns:zope="http://namespaces.zope.org/zope"
+ >
+
+ <!-- Make this package a Zope 2 product -->
+ <five:registerPackage package="." initialize=".initialize" />
+
+ <include package="Products.PloneFormGen" />
+ <include package="collective.googleanalytics" />
+ <include package="plone.app.caching" />
+ <include package="plone.browserlayer" />
+
+ <configure zcml:condition="installed collective.recaptcha">
+     <include package="collective.recaptcha" />
+ </configure> 
+ <configure zcml:condition="installed collective.captcha">
+     <include package="collective.captcha" />
+ </configure>
+
+ <include file="profiles.zcml" />
+
+ <include package=".browser" />
+ <include package=".portlets" />
+ 
+ <!-- Fix Simple Social on PloneFormGen thank you pages. Once all our Plone 4
+      sites are using collective.simplesocial >= 1.5, we can remove this. -->
+ <configure zcml:condition="installed collective.simplesocial">
+   <configure zcml:condition="not-installed collective.simplesocial.likebutton">
+     <zope:adapter for="Products.PloneFormGen.interfaces.IPloneFormGenThanksPage"
+         factory=".feedform.ThankYouFeedFormDataProvider" />
+   </configure>
+ </configure>
+
+</configure>

@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Change last mod date</title>
+</head>
+<body>
+    <form action="@@changeDate">
+        <p>This form changes the date of the item that you
+            were just on. Be sure you know what you're doing!</p>
+        <input name="d" value="YYYY-MM-DD" />
+        <input type="radio" name="f" value="setModificationDate" /> modification
+        <input type="radio" name="f" value="setCreationDate" checked="checked"/> creation
+        <br/><input type="submit" value="go" />
+    </form>
+
+</body>
+</html>

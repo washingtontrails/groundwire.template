@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <object name="site_actions" meta_type="CMF Action Category">
+     <object name="contact" meta_type="CMF Action" i18n:domain="plone">
+        <property name="url_expr">string:${globals_view/navigationRootUrl}/contact-form</property>
+     </object>
+ </object>
+ <object name="document_actions" meta_type="CMF Action Category">
+	<object name="print" meta_type="CMF Action" i18n:domain="plone">
+	 <property name="visible">True</property>
+	</object>
+ </object>
+ <object name="user" meta_type="CMF Action Category">
+    <object name="site_help" meta_type="CMF Action" i18n:domain="plone" insert-before="logout">
+      <property name="title">Site Help</property>
+      <property name="description">Documentation specific to this website.</property>
+      <property name="url_expr">string:${portal_url}/site-help</property>
+      <property name="permissions">
+          <element value="Manage portal"/>
+      </property>
+      <property name="visible">True</property>
+    </object>
+    <object name="plone_help" meta_type="CMF Action" i18n:domain="plone" insert-before="logout">
+      <property name="title">Plone Manual</property>
+      <property name="description">Documentation about using the Plone content management system.</property>
+      <property name="url_expr">string:http://plone.org/documentation/manual/plone-4-user-manual</property>
+      <property name="permissions">
+          <element value="Manage portal"/>
+      </property>
+      <property name="visible">True</property>
+    </object>
+    <object name="groundwire_support" meta_type="CMF Action" i18n:domain="plone" insert-before="logout">
+      <property name="title">Groundwire Support</property>
+      <property name="description">Submit a support ticket to Groundwire.</property>
+      <property name="url_expr">string:http://groundwire.org/support/support_form</property>
+      <property name="permissions">
+          <element value="Manage portal"/>
+      </property>
+      <property name="visible">True</property>
+    </object>
+  </object>
+</object>

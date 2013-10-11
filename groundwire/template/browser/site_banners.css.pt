@@ -1,0 +1,8 @@
+/* Site banners */
+
+<tal:brains tal:define="mimetype python:request.response.setHeader('Content-type', 'text/css');"
+    repeat="brain view/banner_brains">
+.<span tal:replace="brain/id" /> #<span tal:replace="view/banner_id" /> {
+    background-image: url(<span tal:replace="brain/getURL" />/image);
+}
+</tal:brains>

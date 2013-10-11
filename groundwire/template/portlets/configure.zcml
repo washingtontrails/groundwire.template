@@ -1,0 +1,26 @@
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="groundwire.template">
+
+  <include package="plone.app.portlets" />
+
+  <plone:portlet
+      name="groundwire.template.EmailCapturePortlet"
+      interface=".emailcapture.IEmailCapturePortlet"
+      assignment=".emailcapture.Assignment"
+      renderer=".emailcapture.Renderer"
+      addview=".emailcapture.AddForm"
+      editview=".emailcapture.EditForm"
+      />
+      
+	<plone:portlet
+      name="groundwire.template.FeaturedItemPortlet"
+      interface=".featureditem.IFeaturedItemPortlet"
+      assignment=".featureditem.Assignment"
+      renderer=".featureditem.Renderer"
+      addview=".featureditem.AddForm"
+      editview=".featureditem.EditForm"
+      />
+
+</configure>

@@ -1,0 +1,55 @@
+<tal:block
+    tal:define="portal context/portal_url/getPortalObject;
+                analytics_js portal/portal_properties/site_properties/webstats_js|nothing;
+                email_from_address portal/portal_properties/site_properties/email_from_address|nothing;
+                expected_mailhost view/expectedMailHost;
+				mailhost_set python:portal.MailHost.smtp_host == expected_mailhost;
+				recaptcha_configured view/recaptchaStatus;">
+
+    <h2>Configuration</h2>
+
+    <dl tal:attributes="class python:'portalMessage ' + str((not analytics_js and 'error') or 'info')">
+        <dt>Analytics</dt>
+        <dd tal:condition="not:analytics_js">
+            Analytics <strong>has not been configured</strong>.
+        </dd>
+        <dd tal:condition="analytics_js">
+            Analytics <strong>may be configured</strong>, but you should still confirm.
+        </dd>
+    </dl>
+
+    <dl tal:attributes="class python:'portalMessage ' + str((not email_from_address and 'error') or 'info')">
+		<dt>E-mail</dt>
+        <dd tal:condition="not:email_from_address">
+            Administrator e-mail <strong>has not been set</strong>.
+			<a tal:attributes="href string:${context/portal_url}/@@mail-controlpanel;" href="">Set it here.</a>
+        </dd>
+        <dd tal:condition="email_from_address">
+           Administrator e-mail <strong>has been set</strong>.
+        </dd>
+    </dl>
+    
+    <dl tal:attributes="class python:'portalMessage ' + str((not mailhost_set and 'error') or 'info')">
+		<dt>Mail Host</dt>
+        <dd tal:condition="not:mailhost_set">
+            Mail host <strong>has not been set properly</strong>.
+            It should be &quot;<span tal:replace="expected_mailhost">127.0.0.1</span>&quot;.
+			<a tal:attributes="href string:${context/portal_url}/@@mail-controlpanel;" href="">Set it here.</a>
+        </dd>
+        <dd tal:condition="mailhost_set">
+           Mail host <strong>has been set properly</strong>.
+        </dd>
+    </dl>
+    
+    <dl tal:attributes="class python:'portalMessage ' + str((not recaptcha_configured and 'error') or 'info')">
+		<dt>ReCaptcha</dt>
+        <dd tal:condition="not:recaptcha_configured">
+            Keys <strong>have not been set</strong>.
+			<a tal:attributes="href string:${context/portal_url}/@@recaptcha-settings;" href="">Set them here.</a>
+        </dd>
+        <dd tal:condition="recaptcha_configured">
+           Keys <strong>have been set</strong>.
+        </dd>
+    </dl>
+
+</tal:block>

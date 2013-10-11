@@ -1,0 +1,29 @@
+<h2>Performance checks</h2>
+
+<dl tal:attributes="class python:'portalMessage ' + str(view.cssDebugModeStatus() == 'On' and 'error' or 'info')">
+    <dt>CSS</dt>
+	<dd>Debug mode is <strong tal:content="view/cssDebugModeStatus"/>.</dd>
+</dl>
+
+<dl tal:attributes="class python:'portalMessage ' + str(view.javascriptDebugModeStatus() == 'On' and 'error' or 'info')">
+    <dt>Javascript</dt>
+	<dd>Debug mode is <strong tal:content="view/javascriptDebugModeStatus"/>.</dd>
+</dl>
+
+<dl tal:attributes="class python:'portalMessage ' + str(view.kssDebugModeStatus() == 'On' and 'error' or 'info')">
+    <dt>KSS</dt>
+	<dd>Debug mode is <strong tal:content="view/kssDebugModeStatus"/>.</dd>
+</dl>
+
+<dl tal:attributes="class python:'portalMessage ' + str(view.cachingStatus() != 'On' and 'error' or 'info')">
+    <dt>Caching</dt>
+	<dd>Caching is <strong tal:content="view/cachingStatus"/>.</dd>
+</dl>
+
+<dl tal:attributes="class python:'portalMessage ' + str(view.customFolderCount() > 0 and 'error' or 'info')">
+    <dt>Custom folder</dt>
+	<dd>
+		Contains <strong tal:content="view/customFolderCount"/> 
+		item<tal:plural content="python:view.customFolderCount() != 1 and 's' or ''">s</tal:plural>.
+	</dd>
+</dl>

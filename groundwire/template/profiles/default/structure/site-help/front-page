@@ -1,0 +1,26 @@
+id: front-page
+title: Site Help
+excludeFromNav: False
+subject: 
+description: This private folder contains all documentation specific to this site
+contributors: 
+creators: admin
+effectiveDate: None
+expirationDate: None
+language: 
+rights: 
+creation_date: 2007/05/21 09:00:00 US/Pacific
+modification_date: 2007/05/21 09:00:00.100 GMT-8
+relatedItems: 
+allowDiscussion: None
+Content-Type: text/html
+
+<h2><strong>Site Help and Documentation:</strong></h2>
+<p>This private folder contains all documentation specific to this site.  Consult the <a href="folder_listing">full list</a> of items in this folder for pages about the various custom parts of this site.</p>
+<p>Advanced documentation for Plone and Plone products can be found at <a href="http://www.plone.org/documentation">Plone.org's documentation section</a>; that site
+also has a section for <a href="http://plone.org/documentation/manual">books and manuals</a>.</p>
+<p>Groundwire highly recommends that our clients sign-up for our <a href="http://groundwire.org/email-capture">monthly Groundwire Newsletter</a>.
+Groundwire Newsletter provides lots of valuable up-to-date information about the
+environmental movement, technology and our products such as Plone.</p>
+<p>Need more help? Groundwire maintains documentation for all of the
+tools we provide to our clients. We encourage you to head to the <a href="http://groundwire.org/support">support section</a> of our site before requesting additional support from us. If you cannot find your answer please feel free to <a href="http://groundwire.org/support/support_form">submit a ticket</a>.</p>

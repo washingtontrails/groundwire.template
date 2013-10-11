@@ -1,0 +1,13 @@
+<object name="portal_controlpanel" meta_type="Plone Control Panel Tool">
+ <configlet
+     title="Pre-launch status"
+     action_id="groundwire_template_prelaunch"
+     appId="groundwire.template"
+     category="Products"
+     condition_expr=""
+     url_expr="string:${portal_url}/@@prelaunch-status"
+     visible="True"
+     >
+  <permission>Manage portal</permission>
+ </configlet>
+</object>

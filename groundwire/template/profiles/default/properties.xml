@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<site>
+ <property name="title">New Plone site</property>
+ <property name="validate_email" type="boolean">False</property>
+ <property name="default_page" type="string">front-page</property>
+</site>

@@ -1,0 +1,8 @@
+"The groundwire-template-final step is run if this file is present in the profile."
+
+This is part of a hack implemented in setuphandlers.py's importFinalTemplateSteps().
+
+It checks to see if this text file is available in the profile before running the method.
+
+The only time this would be available is initially when this extension profile is run to create
+a site.  During other misc imports, it's not since it's not listed in import_steps.xml.

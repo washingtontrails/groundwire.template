@@ -1,0 +1,304 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xml:lang="en" lang="en"
+      metal:use-macro="here/main_template/macros/master">
+
+<metal:block metal:fill-slot="top_slot"
+             tal:define="dummy python:request.set('disable_border', 1)" />
+
+<body>
+<div metal:fill-slot="main">
+    
+<h1>Editor Styles</h1>
+<h2>Heading (H2)</h2>
+<h3>Subheading (H3)</h3>
+<h4>Third-Level Heading (h4)</h4>
+<h2>Paragraphs</h2>
+<h3>Left-aligned paragraph</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
+tempus lectus. Praesent volutpat tempor malesuada. Quisque laoreet odio
+suscipit eros dictum eget feugiat augue auctor. Nullam hendrerit
+accumsan magna, vitae eleifend massa volutpat sit amet. Class aptent
+taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+himenaeos. Morbi orci nibh, scelerisque nec euismod at, tincidunt et
+justo. Nulla sed dui eros, ut fringilla est. Morbi dui magna,
+adipiscing vitae aliquet et, tristique ac elit. Vestibulum ut vulputate
+lectus. Nam faucibus, orci vitae consequat luctus, nisi nibh ultrices
+turpis, nec porttitor lorem turpis vel turpis.</p>
+<h3>Centered paragraph<br /></h3>
+<p align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
+tempus lectus. Praesent volutpat tempor malesuada. Quisque laoreet odio
+suscipit eros dictum eget feugiat augue auctor. Nullam hendrerit
+accumsan magna, vitae eleifend massa volutpat sit amet. Class aptent
+taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+himenaeos. Morbi orci nibh, scelerisque nec euismod at, tincidunt et
+justo. Nulla sed dui eros, ut fringilla est. Morbi dui magna,
+adipiscing vitae aliquet et, tristique ac elit. Vestibulum ut vulputate
+lectus. Nam faucibus, orci vitae consequat luctus, nisi nibh ultrices
+turpis, nec porttitor lorem turpis vel turpis.</p>
+<h3>Right-aligned paragraph</h3>
+<p align="right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
+tempus lectus. Praesent volutpat tempor malesuada. Quisque laoreet odio
+suscipit eros dictum eget feugiat augue auctor. Nullam hendrerit
+accumsan magna, vitae eleifend massa volutpat sit amet. Class aptent
+taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+himenaeos. Morbi orci nibh, scelerisque nec euismod at, tincidunt et
+justo. Nulla sed dui eros, ut fringilla est. Morbi dui magna,
+adipiscing vitae aliquet et, tristique ac elit. Vestibulum ut vulputate
+lectus. Nam faucibus, orci vitae consequat luctus, nisi nibh ultrices
+turpis, nec porttitor lorem turpis vel turpis.</p>
+<h2>Lists</h2>
+<h3>Ordered list<br /></h3>
+<ol><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
+tempus lectus. Praesent volutpat tempor malesuada. Quisque laoreet odio
+suscipit eros dictum eget feugiat augue auctor.</li><li>Nullam hendrerit accumsan magna, vitae eleifend massa volutpat sit
+amet. Class aptent taciti sociosqu ad litora torquent per conubia
+nostra, per inceptos himenaeos. Morbi orci nibh, scelerisque nec
+euismod at, tincidunt et justo.</li><li>Nulla sed dui eros, ut fringilla est. Morbi dui magna, adipiscing vitae
+aliquet et, tristique ac elit. Vestibulum ut vulputate lectus. Nam
+faucibus, orci vitae consequat luctus, nisi nibh ultrices turpis, nec
+porttitor lorem turpis vel turpis.</li></ol>
+<h3>Unordered list</h3>
+<ul>
+<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
+tempus lectus. Praesent volutpat tempor malesuada. Quisque laoreet odio
+suscipit eros dictum eget feugiat augue auctor.</li>
+<li>Nullam hendrerit accumsan magna, vitae eleifend massa volutpat sit
+amet. Class aptent taciti sociosqu ad litora torquent per conubia
+nostra, per inceptos himenaeos. Morbi orci nibh, scelerisque nec
+euismod at, tincidunt et justo.</li>
+<li>Nulla sed dui eros, ut fringilla est. Morbi dui magna, adipiscing vitae
+aliquet et, tristique ac elit. Vestibulum ut vulputate lectus. Nam
+faucibus, orci vitae consequat luctus, nisi nibh ultrices turpis, nec
+porttitor lorem turpis vel turpis.</li></ul>
+<h2>Indents (tag: blockquote)<br /></h2>
+<blockquote>
+<p>Nullam hendrerit accumsan magna, vitae eleifend massa volutpat sit
+amet. Class aptent taciti sociosqu ad litora torquent per conubia
+nostra, per inceptos himenaeos. Morbi orci nibh, scelerisque nec
+euismod at, tincidunt et justo.</p>
+<blockquote>
+<p>Nulla sed dui eros, ut fringilla est. Morbi dui magna, adipiscing vitae
+aliquet et, tristique ac elit. Vestibulum ut vulputate lectus. Nam
+faucibus, orci vitae consequat luctus, nisi nibh ultrices turpis, nec
+porttitor lorem turpis vel turpis.</p>
+<blockquote>
+<p>Cras sed lorem sed nunc faucibus feugiat. Vivamus auctor rutrum quam
+vel egestas. Aliquam mauris nisl, vehicula faucibus imperdiet
+consequat, faucibus in tellus. Mauris convallis nulla quis enim
+lobortis malesuada. Aliquam et lorem ut enim suscipit vestibulum a in
+lorem.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2>Images</h2>
+<h3>Left-aligned (class: image-left)</h3>
+<p>&nbsp;</p>
+<p>
+<img class="image-left" src="logo.jpg" alt="The logo for this site" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
+tempus lectus. Praesent volutpat tempor malesuada. Quisque laoreet odio
+suscipit eros dictum eget feugiat augue auctor. Nullam hendrerit
+accumsan magna, vitae eleifend massa volutpat sit amet. Class aptent
+taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+himenaeos. Morbi orci nibh, scelerisque nec euismod at, tincidunt et
+justo. Nulla sed dui eros, ut fringilla est. Morbi dui magna,
+adipiscing vitae aliquet et, tristique ac elit. Vestibulum ut vulputate
+lectus. Nam faucibus, orci vitae consequat luctus, nisi nibh ultrices
+turpis, nec porttitor lorem turpis vel turpis.</p>
+<h3>Right-aligned (class: image-right)<br /></h3>
+<img class="image-right" src="logo.jpg" alt="The logo for this site" />
+<p>Cras sed lorem sed nunc faucibus feugiat. Vivamus auctor rutrum quam
+vel egestas. Aliquam mauris nisl, vehicula faucibus imperdiet
+consequat, faucibus in tellus. Mauris convallis nulla quis enim
+lobortis malesuada. Aliquam et lorem ut enim suscipit vestibulum a in
+lorem. Vestibulum nunc leo, mattis at ullamcorper id, tincidunt eget
+ante. Morbi nec nibh tempus ligula consequat rutrum at vel justo.
+Curabitur ornare ullamcorper urna, id pretium augue tincidunt non.
+Aliquam vehicula, sapien in accumsan aliquam, ipsum orci blandit enim,
+non posuere nulla justo vitae elit. In vehicula rutrum est, in iaculis
+dui dignissim ut. Nulla facilisi. Sed mi sapien, adipiscing ut mattis
+quis, sagittis aliquet magna. Etiam ut tellus a orci porttitor interdum
+vel in dolor. Nulla eget tincidunt ipsum. Morbi at diam arcu. Quisque
+nec diam et nunc ornare faucibus non eu felis. Duis in nunc fringilla
+ligula ornare ultricies vel sed nunc. Vestibulum et ligula quam. Fusce
+tempus hendrerit lacus, quis viverra tortor aliquam non.</p>
+<h2>Links</h2>
+<h3>Internal link (class: internal-link)<br /></h3>
+<p>This paragraph contains an <a title="Welcome to your new site (TK)" class="internal-link" href=".">internal link to this page</a>.</p>
+<h3>External link (class: external-link)<br /></h3>
+<p>This paragraph contains an <a class="external-link" href="http://www.google.com/">external link to Google</a>.</p>
+<h2>Tables</h2>
+<h3>Subdued grid (class: plain)<br /></h3>
+<table class="plain">
+<thead>
+<tr>
+<th>Date</th>
+<th>Manager</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10/24/2003</td>
+<td>John</td>
+<td>This row has the class odd.<br /></td>
+</tr>
+<tr class="even">
+<td>&nbsp;5/12/2006</td>
+<td>Sandy<br /></td>
+<td>This row has the class even.</td>
+</tr>
+<tr class="odd">
+<td>9/1/2007</td>
+<td>Eric</td>
+<td>This row has the class odd.</td>
+</tr>
+<tr class="even">
+<td>&nbsp;4/17/2009</td>
+<td>Lisa</td>
+<td>This row has the class even.</td>
+</tr>
+</tbody>
+</table>
+<h3>Invisible grid (class: invisible)<br /></h3>
+<table class="invisible">
+<thead>
+<tr>
+<th>Date</th>
+<th>Manager</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10/24/2003</td>
+<td>John</td>
+<td>This row has the class odd.<br /></td>
+</tr>
+<tr class="even">
+<td>&nbsp;5/12/2006</td>
+<td>Sandy<br /></td>
+<td>This row has the class even.</td>
+</tr>
+<tr class="odd">
+<td>9/1/2007</td>
+<td>Eric</td>
+<td>This row has the class odd.</td>
+</tr>
+<tr class="even">
+<td>&nbsp;4/17/2009</td>
+<td>Lisa</td>
+<td>This row has the class even.</td>
+</tr>
+</tbody>
+</table>
+<h3>Fancy listing (class: listing)<br /></h3>
+<table class="listing">
+<thead>
+<tr>
+<th>Date</th>
+<th>Manager</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10/24/2003</td>
+<td>John</td>
+<td>This row has the class odd.<br /></td>
+</tr>
+<tr class="even">
+<td>&nbsp;5/12/2006</td>
+<td>Sandy<br /></td>
+<td>This row has the class even.</td>
+</tr>
+<tr class="odd">
+<td>9/1/2007</td>
+<td>Eric</td>
+<td>This row has the class odd.</td>
+</tr>
+<tr class="even">
+<td>&nbsp;4/17/2009</td>
+<td>Lisa</td>
+<td>This row has the class even.</td>
+</tr>
+</tbody>
+</table>
+<h3>Fancy grid listing (classes: grid listing)<br /></h3>
+<table class="grid listing">
+<thead>
+<tr>
+<th>Date</th>
+<th>Manager</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10/24/2003</td>
+<td>John</td>
+<td>This row has the class odd.<br /></td>
+</tr>
+<tr class="even">
+<td>&nbsp;5/12/2006</td>
+<td>Sandy<br /></td>
+<td>This row has the class even.</td>
+</tr>
+<tr class="odd">
+<td>9/1/2007</td>
+<td>Eric</td>
+<td>This row has the class odd.</td>
+</tr>
+<tr class="even">
+<td>&nbsp;4/17/2009</td>
+<td>Lisa</td>
+<td>This row has the class even.</td>
+</tr>
+</tbody>
+</table>
+<h3>Fancy vertical listing (classes: vertical listing)<br /></h3>
+<table class="vertical listing">
+<thead>
+<tr>
+<th>Date</th>
+<th>Manager</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10/24/2003</td>
+<td>John</td>
+<td>This row has the class odd.<br /></td>
+</tr>
+<tr class="even">
+<td>&nbsp;5/12/2006</td>
+<td>Sandy<br /></td>
+<td>This row has the class even.</td>
+</tr>
+<tr class="odd">
+<td>9/1/2007</td>
+<td>Eric</td>
+<td>This row has the class odd.</td>
+</tr>
+<tr class="even">
+<td>&nbsp;4/17/2009</td>
+<td>Lisa</td>
+<td>This row has the class even.</td>
+</tr>
+</tbody>
+</table>
+<h2>Inline styles</h2>
+<h3>Discreet (class: discreet)<br /></h3>
+<p class="discreet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in
+enim a urna mattis pretium a vel sapien. Integer neque ligula,
+ultricies at viverra ut, lacinia quis urna. Proin ac volutpat nunc.
+Mauris id velit et felis tempor ornare sollicitudin pharetra nisi. Cras
+hendrerit accumsan semper.</p>
+
+</div>
+</body>
+
+</html>

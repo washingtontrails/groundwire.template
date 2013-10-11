@@ -1,0 +1,12 @@
+To install this product, add groundwire.template to your buildout, re-run buildout,
+and restart Zope. 
+
+The typical use for this template is to use its setup profile when creating a 
+Plone site.  If you use this method, it is important that the Groundwire Template
+be the **only** extension profile selected when you install.
+
+Alternatively you may, in any existing Plone instance, install groundwire.template
+using the portal_quickinstaller in the ZMI or the "Add-ons" section
+of the Plone administrative UI ("site setup").  Note that this method will not result
+in many of the default site settings being applied -- it will mostly just give you
+the skin-level improvements.

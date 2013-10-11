@@ -1,0 +1,18 @@
+<tal:temporary_content tal:define="items view/getItems">
+
+    <h2>Temporary content</h2>
+
+    <dl tal:condition="items">
+
+        <tal:loop repeat="item view/getItems">
+        <dt tal:content="item/Title">Page Title</dt>
+        <dd class="discreet">
+            <b>Location:</b> <span tal:content="item/getPath">Path</span><br />
+            <a tal:attributes="href item/getURL">View</a> | 
+            <a tal:attributes="href string:${item/getURL}/edit">Edit</a> |
+            <a tal:attributes="href string:${item/getURL}/delete_confirmation">Delete</a>
+        </dd>
+        </tal:loop>
+    </dl>
+
+</tal:temporary_content>

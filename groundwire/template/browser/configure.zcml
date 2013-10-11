@@ -1,0 +1,94 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+ >
+ 
+    <!-- pre-launch status screen -->
+    <include package=".prelaunch"/>
+ 
+    <!-- We want our viewlet customizations only to apply to sites with the
+        template installed. -->
+
+    <browser:viewlet
+        name="plone.footer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer="..interfaces.IGroundwireTemplateLayer"
+        template="footer.pt"
+        permission="zope2.View" 
+        />
+
+    <browser:viewlet
+        name="plone.colophon"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer="..interfaces.IGroundwireTemplateLayer"
+        template="colophon.pt"
+        permission="zope2.View" 
+        />
+        
+    <!-- Hide personal bar from anonymous users. -->
+    <browser:viewlet
+        name="plone.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        layer="..interfaces.IGroundwireTemplateLayer"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        permission="cmf.SetOwnPassword"
+        />
+    
+    <!-- move site actions to portalheader manager -->
+    <browser:viewlet
+        name="plone.site_actions"
+        layer="..interfaces.IGroundwireTemplateLayer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.SiteActionsViewlet"
+        permission="zope2.View"
+        />
+    
+    <browser:viewlet
+        name="groundwire.template.login_stats"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer="..interfaces.IGroundwireTemplateLayer"
+        class=".viewlets.LoginStatsViewlet"
+        permission="zope2.View"
+        />
+
+    <browser:page
+          for="*"
+          name="changeDate"
+          class=".changedate.ChangeDate"
+          permission="cmf.ManagePortal"
+          layer="..interfaces.IGroundwireTemplateLayer"
+          />
+          
+    <browser:page
+          for="*"
+          name="large-files"
+          class=".disk_hogs.DiskHogs"
+          permission="cmf.ManagePortal"
+          layer="..interfaces.IGroundwireTemplateLayer"
+          />
+    
+    <browser:page
+      for="*"
+      name="clear-editor-preference"
+      class=".utils.ClearEditorPreference"
+      layer="..interfaces.IGroundwireTemplateLayer"
+      permission="cmf.ManagePortal"
+      />
+    
+    <browser:page
+          for="*"
+          name="site_banners.css"
+          class=".site_banners.SiteBanners"
+          permission="zope2.View"
+          layer="..interfaces.IGroundwireTemplateLayer"
+          />
+          
+    <browser:page
+        for="Products.PloneFormGen.interfaces.IPloneFormGenForm"
+        name="paypal_redirect"
+        class=".paypal.RedirectToPaypal"
+  	    layer="..interfaces.IGroundwireTemplateLayer"
+        permission="zope2.View"
+        />
+        
+</configure>

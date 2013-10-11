@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:block fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)" />
+    <metal:block fill-slot="column_one_slot" />
+    <metal:block fill-slot="column_two_slot" />
+</head>
+
+<body>
+<metal:main fill-slot="main"
+    tal:define="hogs view/getHogs">
+
+    <h1 class="documentFirstHeading">
+        <span tal:define="types view/getTypes"
+            tal:replace="python:' and '.join([type + 's' for type in types]).capitalize()">
+            Files and images
+        </span>
+         over <span tal:replace="view/getSizeLimit">100</span> kB
+    </h1>
+    
+    <p class="documentDescription">
+        Lists the largest files on the site.
+    </p>
+
+    <ul id="disk-hogs"
+        tal:condition="hogs">
+        <li tal:repeat="hog hogs">
+            <a tal:attributes="href string:${hog/url}/view"
+                tal:content="hog/title"
+                href="">Item Title</a>
+            <span class="size" tal:content="string:(${hog/human_size})"></span>
+        </li>
+    </ul>
+    
+    <p tal:condition="not:hogs">
+        No
+        <span tal:define="types view/getTypes"
+            tal:replace="python:' or '.join([type + 's' for type in types]).lower()">
+            Files and images
+        </span>
+         over <span tal:replace="view/getSizeLimit">100</span> kB found.
+    </p>
+
+</metal:main>
+</body>
+</html>

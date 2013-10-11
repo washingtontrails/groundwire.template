@@ -1,0 +1,28 @@
+<tal:block define="dummy python:request.RESPONSE.setHeader('Content-Type', 'text/plain;;charset=utf-8')" />
+
+<tal:comment tal:replace="nothing">
+Generated robots.txt to disallow indexing of staging URLs
+</tal:comment>
+
+<tal:defines
+    tal:define="domain request/SERVER_URL;
+                domain python: test(domain.startswith('http://'), domain[7:], domain);
+                domain python: test(domain.endswith(':80'), domain[:-3], domain);
+                subdomain python:domain.split('.')[0];
+                allowed_subdomains python:('www',);
+                is_staging python:(domain.endswith('.onenw.org') or domain.endswith('.groundwire.org') or domain.endswith('.groundwireconsulting.com')) and subdomain not in allowed_subdomains">
+
+User-Agent: *
+Disallow: <tal:is_staging tal:condition="is_staging">/</tal:is_staging>
+
+# Add Googlebot-specific syntax extension to exclude forms 
+# that are repeated for each piece of content in the site 
+# the wildcard is only supported by Googlebot
+# http://www.google.com/support/webmasters/bin/answer.py?answer=40367&ctx=sibling
+
+User-Agent: Googlebot
+Disallow: <tal:is_staging tal:condition="is_staging">/</tal:is_staging>
+Disallow: /*sendto_form$
+Disallow: /*folder_factories$
+
+</tal:defines>

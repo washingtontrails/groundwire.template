@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="groundwire-template-final"
+               version="20060621-01"
+               handler="groundwire.template.setuphandlers.importFinalTemplateSteps"
+               title="Final Groundwire Template Config">
+   <dependency step="structure"/>
+    Final Groundwire template configuration
+  </import-step>
+</import-steps>

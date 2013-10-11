@@ -1,0 +1,25 @@
+<div id="portal-colophon"
+     metal:define-macro="colophon"
+     i18n:domain="plone">
+<metal:slot define-slot="colophon" />
+<div class="colophonWrapper">
+<ul>
+  <li i18n:translate="txt_powered_by_plone" id="powered-by-plone">
+	powered by
+    <a href="http://plone.org"
+       title="This site was built using Plone CMS, the Open Source Content Management System. Click for more information."
+       i18n:attributes="title title_built_with_plone;"
+       i18n:translate="label_powered_by_plone">
+      Plone</a>
+  </li>
+  <li i18n:translate="txt_site_by_groundwire" id="site-by">
+	site by
+    <a href="http://groundwireconsulting.com/"
+       title="You are connected"
+       i18n:attributes="title title_groundwire;"
+       i18n:translate="groundwire_org_link">
+      Groundwire Consulting</a>
+  </li>
+</ul>
+</div>
+</div>

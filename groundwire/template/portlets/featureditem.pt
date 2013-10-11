@@ -1,0 +1,70 @@
+<dl class="portlet portletFeaturedItem"
+    i18n:domain="plone"
+    tal:define="abstract view/data/abstract;
+                collection_url view/collection_url;
+                featured_item python:view.results()[0].getObject();
+                viewActions here/portal_properties/site_properties/typesUseViewActionInListings|python:();
+                useView python:featured_item.portal_type in viewActions;
+                itemUrl python:useView and featured_item.absolute_url() + '/view' or featured_item.absolute_url();
+                more_url python:(abstract and itemUrl) or collection_url;">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a tal:condition="view/data/header"
+            tal:attributes="href more_url">
+            <span tal:content="view/data/header" />
+        </a>
+        <a tal:condition="not:view/data/header"
+            tal:attributes="href itemUrl">
+            <span tal:content="featured_item/Title|nothing" />
+        </a>
+        <span class="portletTopRight"></span>
+    </dt>
+    
+    <dd class="portletItem"
+        tal:condition="not:abstract"
+        tal:content="structure featured_item/aq_base/getText|nothing">
+        Body text
+    </dd>
+    
+    <dd class="portletItem"
+        tal:condition="abstract">
+        <h3 class="featuredItemTitle"
+            tal:condition="view/data/header">
+            <a tal:attributes="href itemUrl"
+                tal:content="featured_item/Title|nothing">
+                Item Title
+            </a>
+        </h3>
+        <div class="image-container"
+            tal:define="image nocall:featured_item/image|nothing;
+                scales featured_item/@@images;"
+            tal:condition="nocall:image">
+            <a tal:attributes="href itemUrl;"
+                href="">
+                <img tal:replace="structure python:scales.scale('image',
+                    width=65, height=65).tag()" />
+            </a>
+        </div>
+        <p tal:define="description featured_item/Description|nothing"
+            tal:condition="description"
+            tal:content="description"
+            class="description">
+            Description
+        </p>
+    </dd>
+    
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <span>
+        <a tal:define="more_text view/data/more_text;"
+            tal:condition="more_text"
+            tal:content="more_text"
+            tal:attributes="href more_url">
+             More
+             </a>
+        </span>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>

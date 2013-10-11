@@ -1,0 +1,189 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* GLOBAL HTML NODES & TEXT STYLES */
+
+h1, h2, h3, h4, h5, h6 { border-bottom: 0; }
+ul { 
+ list-style-type: disc;
+ list-style-image: none;
+}
+.documentDescription { display: none; }
+
+/* KUPU */
+.image-right, .image-left { border: none; }
+
+table.grid { border-collapse: collapse; }
+table.grid td { 
+ border: 1px solid &dtml-globalBorderColor;;
+ padding: 2px;
+ vertical-align: top;
+}
+
+table.outlined {
+ border-collapse: collapse;
+ border: 1px solid &dtml-globalBorderColor;;
+}
+
+table.outlined td { 
+ padding: 2px;
+ vertical-align: top;
+}
+table.plain td,
+table.plain th { vertical-align: top;
+ border:1px solid #ccc; }
+
+/**** MAIN NAVIGATION ****/
+
+ #portal-globalnav li a {
+     padding:0.5em 1em;
+ }
+
+ #portal-globalnav {
+     background-color:transparent;
+     font-size:90%;
+ }
+ 
+/**** DROPDOWNS ****/ 
+
+ #contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu.activated dd {
+    font-weight:normal;
+ }
+
+/**** SEARCHBOX ****/
+
+ .searchSection {
+     display:none;
+ }
+ 
+ /**** SITEACTIONS ****/
+
+ #portal-siteactions {
+     padding-bottom:0px;
+     float:right;
+     padding-right:10px;
+ }
+
+/* Show breadcrumbs by default */
+#portal-breadcrumbs {
+    display: block;
+    margin: 0;
+}
+
+.section-front-page #portal-breadcrumbs {
+    display:none;
+}
+
+#breadcrumbs-home,
+#breadcrumbs-current,
+#breadcrumbs-1 {
+    display: inline;
+}
+
+/* PRESENTATION MODE */
+
+#link-presentation {
+    display:none;
+}
+
+
+/* BOTTOM OF PAGE */
+#portal-colophon {
+ color: #333;
+ font-size: 9px;
+}
+#portal-colophon a {
+ color: #333;
+ text-decoration: none;
+}	
+#portal-colophon a:hover {
+ color: #333;
+ text-decoration: underline;
+}
+li#powered-by-plone { border-right: 1px solid #333; }
+/* POPUP FOR RELATED ITEMS  -------------------------- */
+
+body.popup {
+    background-color:#fff;
+}
+
+/* SITE MAP -------------------------- */
+
+#portal-sitemap {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    font-size: 90%;
+    border: none;
+}
+
+#portal-sitemap a {
+border: 0px;
+}
+
+#portal-sitemap a:hover {
+border: 0px;
+}
+
+#portal-sitemap ul { 
+    margin-top: 0;
+    border:0px;
+    }
+    
+#portal-sitemap .navTreeItem {
+    border:0px;
+}
+
+#portal-sitemap .navTreeItem a:hover {
+    background-image: none !important;
+    background-color: transparent;
+    border:0px;
+    color: #ccc !important; 
+    font-weight: bold;
+    text-decoration:underline;
+    border: 0; 
+    margin: 0;
+}
+
+#portal-sitemap .navTreeLevel2 {
+    border-left:0px;
+}
+
+#portal-sitemap .navTreeLevel3 {
+    border-left:0px;
+}
+
+#portal-sitemap .navTreeLevel4 {
+    border-left:0px;
+}
+
+/* AT Reference Browser Widget icons */
+.icons-on .ArchetypesReferenceBrowserWidget td.contenttype-document {
+    background: no-repeat transparent 0px 4px url(contenttypes-sprite.png);
+}
+.icons-on .ArchetypesReferenceBrowserWidget td.contenttype-event {
+    background: no-repeat transparent 0px -212px url(contenttypes-sprite.png);
+}
+.icons-on .ArchetypesReferenceBrowserWidget td.contenttype-folder {
+    background: no-repeat transparent 0px -644px url(contenttypes-sprite.png);
+}
+.icons-on .ArchetypesReferenceBrowserWidget td.contenttype-link {
+    background: no-repeat transparent 0px -1076px url(contenttypes-sprite.png);
+}
+.icons-on .ArchetypesReferenceBrowserWidget td.contenttype-news-item {
+    background: no-repeat transparent 0px -1292px url(contenttypes-sprite.png);
+}
+.icons-on .ArchetypesReferenceBrowserWidget td.contenttype-plone-site {
+    background: no-repeat transparent 0px -1508px url(contenttypes-sprite.png);
+}
+.icons-on .ArchetypesReferenceBrowserWidget td.contenttype-topic {
+    background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
+}
+.icons-on .ArchetypesReferenceBrowserWidget td.contenttype-file {
+    background: no-repeat transparent 0px -428px url(contenttypes-sprite.png);
+}
+.icons-on .ArchetypesReferenceBrowserWidget td.contenttype-image {
+    background: no-repeat transparent 0px -860px url(contenttypes-sprite.png);
+}
+
+/* </dtml-with> */

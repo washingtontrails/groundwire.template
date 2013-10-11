@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+ <object name="navtree_properties" meta_type="Plone Property Sheet">
+  <property name="includeTop" type="boolean">False</property>
+  <property name="metaTypesNotToList" type="lines" purge="False">
+   <element value="CMF Document"/>
+   <element value="CMF Event"/>
+   <element value="CMF Favorite"/>
+   <element value="CMF File"/>
+   <element value="CMF Folder"/>
+   <element value="CMF Image"/>
+   <element value="CMF Large Plone Folder"/>
+   <element value="CMF Link"/>
+   <element value="CMF News Item"/>
+   <element value="CMF Topic"/>
+   <element value="Event"/>
+   <element value="Favorite"/>
+   <element value="File"/>
+   <element value="Image"/>
+   <element value="Link"/>
+   <element value="News Item"/>
+  </property>
+  <property name="enable_wf_state_filtering" type="boolean">True</property>
+  <property name="wf_states_to_show" type="lines">
+   <element value="published"/>
+  </property>
+ </object>
+ <object name="site_properties" meta_type="Plone Property Sheet">
+  <property name="calendar_future_years_available" type="int">3</property>
+  <property name="disable_folder_sections" type="boolean">True</property>
+  <property name="icon_visibility" type="string">authenticated</property>
+  <property name="enable_sitemap" type="boolean">True</property>
+  <property name="use_email_as_login" type="boolean">True</property>
+ </object>
+</object>

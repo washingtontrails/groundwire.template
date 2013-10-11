@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="groundwire_template">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Groundwire Template"
+      directory="profiles/default"
+      description="These are the basic defaults for our baseline site."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      />
+
+</configure>

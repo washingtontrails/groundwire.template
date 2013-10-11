@@ -1,0 +1,180 @@
+Changelog
+=========
+
+Groundwire Template for Plone 4.0
+---------------------------------
+
+* Added option to featured item portlet to show description instead of
+  body text.
+  [yomatters]
+
+* Made zipcode optional for PayPal redirect.
+  [yomatters]
+
+* Added PayPal redirect view from ONENW Template.
+  [yomatters]
+
+* Explicitly include ZCML for dependencies.
+  [davisagli]
+
+* Added CSS hooks for site banners at arbitrary levels in the content tree.
+  [yomatters]
+
+* Added utility view, @@clear-editor-preference, to clear all users'
+  wysiwyg_editor property so that the site default editor is used.
+  [davisagli]
+
+* Added featured item portlet.
+  [yomatters]
+
+* Added a conclusion field to the e-mail sign-up portlet.
+  [yomatters]
+
+* Check for plone.app.caching instead of CacheFu.
+  [davisagli]
+
+* Hid the personal bar from anonymous users.
+  [yomatters]
+
+* Install collective.googleanalytics by default.
+  [yomatters]
+
+* Removed unnecessary references to Sunburst Theme.
+  [yomatters]
+
+* Enable the plain-text paste button in TinyMCE by default.
+  [davisagli]
+
+* Stop adding the sendto document action.
+  [davisagli]
+
+* Removed unnecessary icon hiding CSS that was interfering with folder_contents
+  display.
+  [yomatters]
+
+* Added generic e-mail capture portlet to replace service-specific products.
+  [yomatters]
+
+* Updated Plone manual link to point at the Plone 4 manual.
+  [davisagli]
+
+* Fixed viewlets and footer template for 4.0b2.
+  [davisagli]
+
+* Updated robots.txt to correctly Disallow Googlebot from staging domains.
+  [davisagli]
+
+* Made site help folder use summary view.
+  [07.02.2010 - matty]
+
+* Customized at_download so that appropriate file types display inline.
+  [07.02.2010 - matty]
+
+* Added mailhost check to prelaunch checklist.
+  [05.27.2010 - matty]
+
+* Set mailhost based on whether this is an Amazon server.
+  [05.27.2010 - matty]
+  
+* Enable embedding of Flash videos by default.
+  [05.24.2010 - matty]
+
+* Remove clear floats from the TinyMCE styles list.
+  [03.10.2010 - matty]
+
+* Change the default breadcrumb separator using javascript.
+  [03.10.2010 - matty]
+
+* Add a warning when users try to change the display of the home page.
+  [12.10.2009 - matty]
+
+* Updated product documentation.
+  [12.10.2009 - matty]
+
+* Changed configuration to us e-mail address as login by default.
+  [12.4.2009 - matty]
+
+* Synced sendto_form with Plone 4 template. Updated captcha macro for Plone 4.
+  Synced our custom colophon with the default Plone 4 markup.
+  [12.4.2009 - matty]
+
+* Updated editor styles example page. Added a check to make sure e-mail address is set
+  (for contact form, etc.) and made prelaunch page use Plone's message styles.
+  [12.4.2009 - matty]
+
+* Simplified default styles in TinyMCE.
+  [12.3.2009 - matty]
+
+* Cleaned up GS XML. Don't customized folder_summary_view anymore. Removed redirect_view
+  because we don't use it.
+  [12.3.2009 - matty]
+
+* We no longer need to rebuild the catalog, remove default portlets, or make the 
+  home page not a presentation.
+  [12.3.2009 - matty]
+
+* Remove unnecessary setup handlers and enabled initial snapshot because it no longer 
+  hangs.
+  [12.3.2009 - matty]
+
+* Removed customization of Kupu settings and added customization for TinyMCE instead.
+  [12.2.2009 - matty]
+
+* We don't configure mailhosts or set the addable types for Plone sites anymore.
+  [12.2.2009 - matty]
+
+* Added a jQuery plugin to add first and last classes to certain ULs for styling purposes.
+  [12.2.2009 - matty]
+
+* Changed our viewlets to override the default viewlets instead of creating new ones.
+  Stopped delegating the footer viewlet to a skin layer template.
+  [12.2.2009 - matty]
+
+* Removed kickstart because we don't use it anymore.
+  [12.2.2009 - matty]
+
+* Updated the portal actions to reference Groundwire. Removed remaining references to 
+  ONE/Northwest and onenw.org.
+  [12.2.2009 - matty]
+
+* Removed the (formerly) customized personal_bar viewlet. Web stats now live in their 
+  own viewlet called LoginStatsViewlet.
+  [12.2.2009 - matty]
+
+ONE/Northwest Template for Plone 3.0
+
+* added a new custom personal_bar viewlet, which sets an X-Plone-User HTTP header
+  so that we can log the user from Apache
+  [10.02.2007 - dglick]
+
+* removed our old personal_bar template (we were hiding it for unauthenticated users,
+  which Plone now does natively)
+  [10.02.2007 - dglick]
+
+* moved our custom site_actions template to a viewlet
+  [10.02.2007 - dglick]
+
+* turned on linking by UID by default.
+  [06.12.2007 - jbaldivieso]
+
+* defaulted the Mail Host to 127.0.0.1 to get around some High Speed Rails SMTP anomalies.
+  [06.12.2007 - jbaldivieso]
+
+* Changes to tests, code, and templates to update to their new Plone 3.0 counterparts and conventions.
+  [06.04.2007 - jbaldivieso]
+
+* Removed Extensions directory -- installation is now done purely with Generic Setup
+  [06.04.2007 - jbaldivieso]
+
+
+ONE/Northwest Template for Plone 2.5.2
+
+* Removed all traces of the newsletter support -- this has been split out into two independent 
+  products (WhatCountsSignup and SympaSignup).
+  [2.15.2007 - jbaldivieso]
+
+* Cleaned up Generic Setup xml so that it's only addressing things that we want to change.
+  [2.15.2007 - jbaldivieso]
+
+* Re-enabled the "accessibility" utility nav link.  (Closing issue #26.)
+  [1.30.2007 - jbaldivieso]

@@ -1,0 +1,50 @@
+==========
+What customizations does this product do?
+==========
+
+Because this type of document is hard to maintain, we're sort of going to punt
+on the answer to that question.  :)
+
+This product does two basic types of customizations of Plone out of the box.
+They are:
+- skin level customizations
+- site setup customizations
+
+==========
+SKIN LEVEL CUSTOMIZATIONS
+==========
+The former is easy to catalog; just look in skins/groundwire_template
+to see what templates and scripts we're overriding (by and large, what you see
+in there is a modified version of what Plone ships with; there are few completely
+new items in there.)  In most cases, the differences are obvious; if not, run
+diff against our version and CMFPlone's version (how's that for punting? :)
+
+==========
+SITE SETUP CUSTOMIZATIONS
+==========
+These are tweaks of the various settings scattered throughout the ZMI (some of
+these settings are exposed now through the Plone administrative UI as well).
+They are things we've found are required of more than 50% of our new sites 
+(usually it's closer to 100%).  These are little things, like navigation 
+settings, or the ability for anonymous viewers to see byline information.
+
+To get a sense of what these things are, look at the docstrings for the unittests
+we've created in the test suites in groundwire.template/tests/.  Look at any Python
+script in that directory whose name starts with "test".  You don't need to know
+Python to see what each test is testing for; we've written in plain English.
+
+For instance, in testSetup, there is a test called "testPortletsAreFew" that 
+looks like this:
+
+def testPortletsAreFew(self):
+    """We only want one portlet to start with: nav in the left col"""
+    # left_slots should be: ('here/portlet_navigation/macros/portlet',)
+    left_slots = ('here/portlet_navigation/macros/portlet',)
+    self.failUnless(self.portal.left_slots==left_slots)
+
+The part enclosed in """triple quotation marks""" is known as the "docstring"; it
+explains what that particular bit of code does.  In this case, it tells us
+that instead of the normal array of portlets in a new site, a Groundwire Template
+site starts with only one.
+
+For more information about unittests, see the README.txt inside the tests folder.

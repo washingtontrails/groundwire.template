@@ -1,0 +1,47 @@
+Site Banners
+============
+
+Site banners replace our Plone 3 section banners with a simpler, more flexible
+system for assigning banners. Site banners can be specified using any body
+class that Plone assigns.
+
+Adding Site Banners
+-------------------
+
+To add site banners, add a folder somewhere in the site hierarchy to hold the
+banners. Then add images to the folder, matching the shortname of the image
+to the desired body class. These are some of the body class patterns that 
+Plone provides:
+
+* section-[id]
+* template-[template_id]
+* portaltype-[portal_type]
+
+The order of the CSS rules is determined by the order of images in the folder.
+So, to make a particular rule override others, move it to the bottom of the
+folder.
+
+Adding the CSS
+--------------
+
+To add the CSS for the site banners, navigate to portal_css in the ZMI. Add a
+new stylesheet with the following id, replacing /path/to/banner/folder with the
+path to the folder that you created in the previous section:
+
+path/to/banner/folder/site_banners.css
+
+Then save your changes.
+
+Adding the Banner Element
+-------------------------
+
+To place the banners, add the following markup to a page template or viewlet:
+
+<div id="banner"></div>
+
+If you need subsection banners, you'll need to wrap the banner element in
+another element and output the subsection classes there:
+
+<div tal:attributes="class context/@@site_banners.css/subsection_classes;">
+    <div id="banner"></div>
+</div>

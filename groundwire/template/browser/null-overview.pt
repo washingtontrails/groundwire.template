@@ -1,0 +1,6 @@
+<tal:comment condition="nothing">
+    We use this template to override plone-overview, the default template
+    for the Zope root, because we don't want to provide links to all the
+    Plone sites on the instance to anonymous users.
+</tal:comment>
+OK

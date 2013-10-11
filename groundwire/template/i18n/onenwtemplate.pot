@@ -1,0 +1,38 @@
+# groundwire.template translations
+# Jon Baldivieso <jonb@groundwire.org>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2006-05-02 21:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: groundwire_template\n"
+
+#. Default: "Powered by ${plone_org_link}"
+#: skins/groundwire_template/colophon.pt
+msgid "txt_powered_by_plone"
+msgstr ""
+
+#. Default: "Site by ${groundwire_org_link}"
+#: skins/groundwire_template/colophon.pt
+msgid "txt_powered_by_plone"
+msgstr ""
+
+#. Default: "You are connected"
+#: skins/groundwire_template/colophon.pt
+msgid "title_groundwire"
+msgstr ""
+
+#. Default: "This website is built on the Plone Content Management System. Click to learn more."
+#: skins/groundwire_template/colophon.pt
+msgid "title_title_this_site_is_plone"
+msgstr ""
+

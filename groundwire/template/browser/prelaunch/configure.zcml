@@ -1,0 +1,62 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+ >
+ 
+ <!-- prelaunch status screen -->
+ <browser:page
+     name="prelaunch-status"
+     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     template="prelaunch.pt"
+     permission="cmf.ManagePortal"
+     />
+ 
+ <!-- Editor styles test page -->
+ <browser:page
+     name="prelaunch-styles"
+     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     template="editorstyles.pt"
+     permission="cmf.ManagePortal"
+     />
+ 
+ <!-- viewlet manager -->
+ <browser:viewletManager
+     name="groundwire.template.prelaunch"
+     provides="...interfaces.IPrelaunchViewletManager"
+     permission="cmf.ManagePortal"
+     class="plone.app.viewletmanager.manager.OrderedViewletManager"
+     />
+     
+ <!-- performance checks viewlet -->
+ <browser:viewlet
+     name="groundwire.template.prelaunch.performancechecks"
+     manager="...interfaces.IPrelaunchViewletManager"
+     class=".viewlets.PerformanceChecksViewlet"
+     permission="cmf.ManagePortal"
+     />
+     
+ <!-- configuration status viewlet -->
+ <browser:viewlet
+     name="groundwire.template.prelaunch.configuration"
+     manager="...interfaces.IPrelaunchViewletManager"
+     class=".viewlets.ConfigurationChecksViewlet"
+     permission="cmf.ManagePortal"
+     />
+
+ <!-- Editor styles viewlet -->
+ <browser:viewlet
+     name="groundwire.template.prelaunch.editorstyles"
+     manager="...interfaces.IPrelaunchViewletManager"
+     template="editorstyles_viewlet.pt"
+     permission="cmf.ManagePortal"
+     />
+
+ <!-- temporary content viewlet -->
+ <browser:viewlet
+     name="groundwire.template.prelaunch.temporarycontent"
+     manager="...interfaces.IPrelaunchViewletManager"
+     class=".viewlets.TemporaryContentViewlet"
+     permission="cmf.ManagePortal" 
+     />
+
+</configure>

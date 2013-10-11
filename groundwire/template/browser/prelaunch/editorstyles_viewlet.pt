@@ -1,0 +1,11 @@
+<tal:block>
+
+    <h2>Editor styles</h2>
+    <div>
+    Check to make sure 
+    <a tal:attributes="href string:${context/portal_url}/@@prelaunch-styles;"
+        href=".">all elements and classes defined in the editor</a>
+    are styled.
+    </div>
+
+</tal:block>

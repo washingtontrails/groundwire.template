@@ -1,0 +1,30 @@
+id: front-page
+title: Welcome to your new site (TK)
+excludeFromNav: False
+subject: 
+description: Congratulations! Welcome to your new Plone site.
+contributors: 
+creators: admin
+effectiveDate: None
+expirationDate: None
+language: 
+rights: 
+creation_date: 2006/06/21 09:00:00 US/Pacific
+modification_date: 2006/06/21 09:00:00.100 GMT-8
+relatedItems: 
+allowDiscussion: None
+Content-Type: text/html
+
+<p>This is your temporary Home Page</p>
+<p>You may begin posting content to your site immediately.  Here are some things you should know:
+</p>
+<ol>
+    <li>An outline of the website training with links to training videos can be found in the <a title="Site Help" href="site-help" target="_self">Site Help folder</a>.</li>
+    <li>So that we are sending out a consistent message we have a number of website standards we are going to ask everyone to follow and help us improve upon. You can find them also in the <a title="Site Help" href="site-help" target="_self">site_help</a> as well.</li>
+    <li>Writing for the web. Writing for the web is an art in itself. Take some time and read some of the following articles for some suggested best practices:
+        <ul>
+            <li><a href="http://www.useit.com/alertbox/9710a.html" rel="nofollow">Reading on the Web (Alertbox)</a></li>
+            <li><a href="http://www.sun.com/980713/webwriting/" target="_self">Writing for the Web</a></li>
+        </ul>
+    </li>
+</ol>

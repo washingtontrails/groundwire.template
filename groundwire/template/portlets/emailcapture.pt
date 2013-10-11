@@ -1,0 +1,51 @@
+<dl class="portlet portletEmailCapture"
+    i18n:domain="groundwire.template">
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <span tal:replace="view/data/header">E-mail Sign-up</span>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+        <div class="email-capture-introduction" 
+            tal:define="text view/data/text;" 
+            tal:condition="text"
+            tal:content="structure text">
+            Introduction
+        </div>
+		<div tal:define="embedded_form view/embedded_form;"
+		    tal:content="structure python:embedded_form or default"
+		    class="email-capture-form-container">
+		        <form tal:attributes="action view/form_url;"
+		            action="" method="post">
+		            <label tal:content="view/data/email_field_label"
+		                for="emailCapture"
+		                class="hiddenStructure">
+		                E-mail
+		            </label>
+		            <input tal:attributes="name view/data/email_field_id;
+		                    title view/data/email_field_label;"
+		                name=""
+		                id="emailCapture"
+		                class="inputLabel"
+		                type="text"
+                        size="12">
+                    <input type="hidden"
+                        name="referralAddress"
+                        tal:attributes="value request/URL" />
+		            <input type="submit" value="Go" class="submit-button">
+		        </form>
+		</div>
+    </dd>
+
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <div class="email-capture-conclusion" 
+            tal:define="conclusion view/data/conclusion;" 
+            tal:condition="conclusion"
+            tal:content="structure conclusion">
+            Conclusion
+        </div>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
