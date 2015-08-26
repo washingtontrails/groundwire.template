@@ -10,13 +10,12 @@
  <five:registerPackage package="." initialize=".initialize" />
 
  <include package="Products.PloneFormGen" />
- <include package="collective.googleanalytics" />
  <include package="plone.app.caching" />
  <include package="plone.browserlayer" />
 
  <configure zcml:condition="installed collective.recaptcha">
      <include package="collective.recaptcha" />
- </configure> 
+ </configure>
  <configure zcml:condition="installed collective.captcha">
      <include package="collective.captcha" />
  </configure>
@@ -25,7 +24,7 @@
 
  <include package=".browser" />
  <include package=".portlets" />
- 
+
  <!-- Fix Simple Social on PloneFormGen thank you pages. Once all our Plone 4
       sites are using collective.simplesocial >= 1.5, we can remove this. -->
  <configure zcml:condition="installed collective.simplesocial">

@@ -3,6 +3,5 @@
   <version>1.0</version>
   <dependencies>
       <dependency>profile-Products.PloneFormGen:default</dependency>
-      <dependency>profile-collective.googleanalytics:default</dependency>
   </dependencies>
 </metadata>

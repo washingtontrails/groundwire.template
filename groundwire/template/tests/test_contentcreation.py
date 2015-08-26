@@ -6,7 +6,7 @@ class TestContentCreation(FunctionalTestCase):
 
     def afterSetUp(self):
         pass
-        
+
     def testSiteReindexed(self):
         """last call in create_base_content is portal.portal_catalog.clearFindAndRebuild()"""
         self.loginAsPortalOwner() # login as manager if all content is created private
@@ -16,7 +16,7 @@ class TestContentCreation(FunctionalTestCase):
         self.failUnless(search.Title=='About Us')
 
     def testBasicFoldersCreated(self):
-        """We add folders for images and files at the root of the site as well 
+        """We add folders for images and files at the root of the site as well
         as a private "Site Help" folder"""
         # XXX need to test if site-help is private
         portal_objects = self.portal.objectIds()
@@ -51,13 +51,6 @@ class TestContentCreation(FunctionalTestCase):
             nav_setting = folder.exclude_from_nav()
             self.failUnless(nav_setting is True,
                             "%s not excluded from nav (%s)" % (folder_name, nav_setting))
-
-    def testEventsSetup(self):
-        """OOTB, Plone creates a smart folder for events. we want it nested in a folder"""
-        # check to make sure that it has an events archive
-        self.failUnless(hasattr(self.portal.events.aggregator, 'previous'))
-        # check to make sure that the events SF is the def page for the folder
-        self.failUnless(self.portal.events.getDefaultPage() == 'aggregator')
 
     def testNewsSetup(self):
         """OOTB, Plone creates a smart folder for news. we want it nested in a folder"""

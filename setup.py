@@ -22,7 +22,6 @@ setup(name='groundwire.template',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'collective.googleanalytics',
           'collective.recaptcha',
           'plone.app.caching',
           'Products.PloneFormGen',
